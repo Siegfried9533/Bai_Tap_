@@ -3,22 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Introduce myself</title>
   </head>
   <body>
-    <div><h1>Giới thiệu bản thân</h1>
-    
-    <img src="images/TruongHoa2.jpg" alt="Avatar" width="200" />
-    <h2>Thông tin cơ bản</h2>
-    <nav>
+    <nav id="menu">
+      <a href="#gioi-thieu">Giới thiệu bản thân</a>
+      <a href="#lien-he">Gửi thông tin và liên hệ cùng tôi</a>
+    </nav>
+    <div id="gioi-thieu">
+      <h1>Giới thiệu bản thân</h1>
+
+      <img
+        src="images/TruongHoa2.jpg"
+        alt="Avatar"
+        width="200"
+        class="Avartar"
+      />
+      <h2>Thông tin cơ bản</h2>
       <ul>
         <li>Tên: Lê Trường Hòa</li>
         <li>Năm sinh: 2005</li>
         <li>Chuyên ngành: Hệ thống Thông tin Quản lý</li>
       </ul>
-    </nav>
-    <h2>Sở thích</h2>
-    <nav>
+      <h2>Sở thích</h2>
       <h3>Món ăn</h3>
       <ol type="1">
         <li>Phở</li>
@@ -38,35 +46,73 @@
         <li>Blinding Lights</li>
         <li>Despacito</li>
       </ul>
-    </nav>
-    <h2>Mục tiêu bản thân</h2>
-    <ol>
-      <li>Hoàn thành môn học với kết quả tốt</li>
-      <li>Nâng cao trình độ ngoại ngữ</li>
-      <li>Tìm hiểu và hực hành một công nghệ mới</li>
-    </ol>
+      <h2>Mục tiêu bản thân</h2>
+      <ol>
+        <li>Hoàn thành môn học với kết quả tốt</li>
+        <li>Nâng cao trình độ ngoại ngữ</li>
+        <li>Tìm hiểu và hực hành một công nghệ mới</li>
+
+        <table class="target_table">
+          <tr>
+            <th>Mục tiêu</th>
+            <th>Thời gian</th>
+            <th>Hoàn thành</th>
+          </tr>
+          <tr>
+            <td>Trung bình điểm môn web đạt 8.0</td>
+            <td>DD/MM/YYYY</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td>Đạt chứng chỉ ngoại ngữ đủ chuẩn tốt nghiệp</td>
+            <td>DD/MM/YYYY</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td>Chọn được công ty với vị trí backend developer</td>
+            <td>DD/MM/YYYY</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+        </table>
+      </ol>
     </div>
-    <div><h1>Gửi thông tin và giao lưu cùng tôi</h1>
-    <form action="/submit"></form>
-    <label for="name">Họ và tên</label>
-    <br />
-    <input id="name" type="text" placeholder="Họ và tên" required />
-    <br />
-    <label for="email">Email</label>
-    <br />
-    <input id="email" type="email" placeholder="Email" required />
-    <br />
-    <label for="comment">Ý kiến của bạn:</label><br />
-      <textarea
-        id="comment"
-        name="comment"
-        rows="6"
-        cols="60"
-        required
-      ></textarea
-      ><br />
-      <input type="submit" value="Gửi thông tin" />
-    </form>
+    <div id="lien-he">
+      <h1>Gửi thông tin và giao lưu cùng tôi</h1>
+      <form action="/submit">
+        <label for="name">Họ và tên:</label>
+        <input id="name" type="text" placeholder="Họ và tên" required />
+        <br />
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Email" required />
+        <br />
+        <label for="comment">Tin nhắn:</label><br />
+        <textarea
+          id="comment"
+          name="comment"
+          rows="6"
+          cols="60"
+          required
+        ></textarea
+        ><br />
+        <p>Giới tính:</p>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Nữ</label>
+        <br />
+        <p>Sở thích:</p>
+        <input type="checkbox" id="listening" name="hobby" value="listening" />
+        <label for="listening">Nghe nhạc</label>
+        <input type="checkbox" id="swimming" name="hobby" value="swimming" />
+        <label for="swimming">Bơi lội</label>
+        <input type="checkbox" id="traveling" name="hobby" value="traveling" />
+        <label for="traveling">Biển</label>
+        <br />
+        <input type="submit" value="Gửi thông tin" />
+      </form>
     </div>
+    <footer>
+      <p>@2024 2001223456 Lê Trường Hòa</p>
+    </footer>
   </body>
 </html>
